@@ -197,6 +197,21 @@ def identify_sales_trends():
     print("\n--- Sales Trends by Category ---")
     for category, total_revenue in sorted_categories:
         print(f"{category}: ₹{total_revenue:,}")
+#5e. Create a function to find the most frequently purchased products
+def find_most_frequently_purchased_products():
+    product_frequency = {}
+    for order in orders:
+        product_name = order[1]
+        if product_name not in product_frequency:
+            product_frequency[product_name] = 0
+        product_frequency[product_name] += 1
+
+    sorted_products = sorted(product_frequency.items(), key=lambda x: x[1], reverse=True)
+    
+    print("\n--- Most Frequently Purchased Products ---")
+    for product, frequency in sorted_products:
+        print(f"{product}: {frequency} purchases")
+
 
 #5e. Generate business insights - 
 # Calculate the total revenue per product category and store it in a dictionary
@@ -247,4 +262,7 @@ def generate_business_insights():
         print(customer)
     
     identify_sales_trends()
+    find_most_frequently_purchased_products()
+
+
 generate_business_insights()    
