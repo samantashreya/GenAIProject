@@ -8,7 +8,7 @@ orders = [('Shreyasi', 'Apple Macbook Air', 150000, 'Electronics'),
           ('Shreyasi', 'Nike Air Zoom Pegasus 38', 7999, 'Fashion & Apparel'),
           ('Sneha', 'M.A.C Macximal Matte Mini Lipstick', 3200, 'Health & Beauty'),
           ('Sneha', "L'Oreal Paris Revitalift Double Serum", 2999, 'Health & Beauty'),
-          ('Sneha', 'Canva Pro', 4000, 'Software & Subscriptions:'),
+          ('Sneha', 'Canva Pro', 4000, 'Software & Subscriptions'),
           ('Sneha', 'Sony WH-1000XM4 Wireless Noise-Canceling Headphones', 24990, 'Electronics'),
           ('Sneha', 'Dyson V11 Torque Drive Cordless Vacuum Cleaner', 59900, 'Home Appliances'),
           ('Sarah', 'Apple iPhone 13 Pro Max', 129900, 'Electronics'),
@@ -213,7 +213,7 @@ def find_most_frequently_purchased_products():
         print(f"{product}: {frequency} purchases")
 
 
-#5e. Generate business insights - 
+#5f. Generate business insights - 
 # Calculate the total revenue per product category and store it in a dictionary
 # Extract unique products from all orders using a set
 # Use a list comprehension to find all customers who purchased electronics
@@ -264,5 +264,5 @@ def generate_business_insights():
     identify_sales_trends()
     find_most_frequently_purchased_products()
 
-
+#Print the business insights by calling the function
 generate_business_insights()    
