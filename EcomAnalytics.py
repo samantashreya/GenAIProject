@@ -140,7 +140,7 @@ def calculate_total_revenue_per_category(orders_list):
   
 #4b Extract unique products from all orders using a set
 unique_categories = set(product_categories.values())
-display_product_categories(unique_categories)
+#display_product_categories(unique_categories)
 
 
 #4c create a function which uses a list comprehension to find all customers who purchased electronics
@@ -208,7 +208,7 @@ def find_most_frequently_purchased_products():
 
     sorted_products = sorted(product_frequency.items(), key=lambda x: x[1], reverse=True)
     
-    print("\n--- Most Frequently Purchased Products ---")
+    print("\n-----Most Frequently Purchased Products-----")
     for product, frequency in sorted_products:
         print(f"{product}: {frequency} purchases")
 
@@ -236,28 +236,28 @@ def generate_business_insights():
     for category, revenue in total_revenue_per_category.items():
         print(f"{category}: ₹{revenue:,}")
     
-    print("\nUnique Products:")
+    print("\n-----Unique Products-----")
     for product in unique_products:
         print(product)
     
-    print("\nCustomers who purchased Electronics:")
+    print("\n-----Customers who purchased Electronics-----")
     for customer in set(electronics_customers):
         print(customer)
     
-    print("\nTop 3 Highest-Spending Customers:")
+    print("\n----Top 3 Highest-Spending Customers----")
     for customer, total in top_customers:
         print(f"{customer}: ₹{total:,}")
     
-    print("\nCustomer Spending Summary:")
+    print("\n----Customer Spending Summary:----")
     print_customer_summary()
     
     multiple_category_customers = find_customers_from_multiple_categories()
-    print("\nCustomers who purchased from multiple categories:")
+    print("\n-----Customers who purchased from multiple categories----")
     for customer in multiple_category_customers:
         print(customer)
     
     common_customers = find_common_customers()
-    print("\nCommon customers who bought both Electronics and Fashion & Apparel:")
+    print("\n-----Common customers who bought both Electronics and Fashion & Apparel----")
     for customer in common_customers:
         print(customer)
     
